@@ -1,0 +1,18 @@
+services:
+    tracker.label_repository:
+        class: CleanPhp\TrackerBundle\Entity\LabelRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments:
+            - CleanPhpTrackerBundle:LabelEntity
+
+    tracker.validator_adapter:
+        class: CleanPhp\TrackerBundle\Validator\ValidatorAdapter
+        arguments:
+            - @validator
+
+    tracker.create_label:
+        class: CleanPhp\Model\CreateLabel
+        arguments:
+            - @tracker.label_repository
+            - @tracker.validator_adapter

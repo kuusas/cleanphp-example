@@ -1,0 +1,4 @@
+clean_php_tracker:
+    resource: "@CleanPhpTrackerBundle/Controller/"
+    type:     annotation
+    prefix:   /
