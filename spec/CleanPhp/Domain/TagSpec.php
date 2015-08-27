@@ -7,13 +7,9 @@ use Prophecy\Argument;
 
 class TagSpec extends ObjectBehavior
 {
-    function let()
-    {
-        $this->beConstructedWith('my name');
-    }
-
     function it_should_return_name()
     {
+        $this->setName('my name');
         $this->getName()->shouldReturn('my name');
     }
 }

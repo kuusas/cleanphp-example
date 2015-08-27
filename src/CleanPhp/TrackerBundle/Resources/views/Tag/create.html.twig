@@ -1,1 +1,5 @@
-<p>Successfully created <b>{{tag.name}}</b></p>
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    {{ form(form, {'action': path('tag_create')}) }}
+{% endblock %}
