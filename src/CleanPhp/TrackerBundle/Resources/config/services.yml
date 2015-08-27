@@ -16,3 +16,8 @@ services:
         arguments:
             - @tracker.tag_repository
             - @tracker.validator_adapter
+
+    tracker.get_tags:
+        class: CleanPhp\Model\GetTags
+        arguments:
+            - @tracker.tag_repository

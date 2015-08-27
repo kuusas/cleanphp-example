@@ -18,9 +18,10 @@ class TagController extends Controller
      */
     public function indexAction()
     {
-        // $data = 
+        $data = $this->get('tracker.get_tags')->getTags();
+
         return $this->render(
-            'CleanPhpTrackerBundle:Tag:create.html.twig',
+            'CleanPhpTrackerBundle:Tag:index.html.twig',
             ['data' => $data]
         );
     }
@@ -57,7 +58,7 @@ class TagController extends Controller
                 'Your changes were saved!'
             );
 
-            return $this->redirectToRoute('tag_new');
+            return $this->redirectToRoute('tag');
         }
 
         return $this->render(
