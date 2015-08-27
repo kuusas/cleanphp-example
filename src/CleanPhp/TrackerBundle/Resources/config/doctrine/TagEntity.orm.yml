@@ -1,7 +1,7 @@
-CleanPhp\TrackerBundle\Entity\LabelEntity:
+CleanPhp\TrackerBundle\Entity\TagEntity:
     type: entity
     table: null
-    repositoryClass: CleanPhp\TrackerBundle\Entity\LabelEntityRepository
+    repositoryClass: CleanPhp\TrackerBundle\Entity\TagEntityRepository
     id:
         id:
             type: integer
