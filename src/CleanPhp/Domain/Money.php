@@ -4,18 +4,18 @@ namespace CleanPhp\Domain;
 
 class Money
 {
-    protected $label;
+    protected $tag;
     protected $amount;
     
-    public function __construct(Label $label, $amount)
+    public function __construct(Tag $tag, $amount)
     {
-        $this->label = $label;
+        $this->tag = $tag;
         $this->amount = $amount;
     }
 
-    public function getLabel()
+    public function getTag()
     {
-        return $this->label;
+        return $this->tag;
     }
 
     public function getAmount()

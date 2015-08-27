@@ -2,15 +2,15 @@
 
 namespace spec\CleanPhp\Domain;
 
-use CleanPhp\Domain\Label;
+use CleanPhp\Domain\Tag;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 class MoneySpec extends ObjectBehavior
 {
-    function let(Label $label)
+    function let(Tag $tag)
     {
-        $this->beConstructedWith($label, 2.45);
+        $this->beConstructedWith($tag, 2.45);
     }
 
     function it_is_initializable()
@@ -18,9 +18,9 @@ class MoneySpec extends ObjectBehavior
         $this->shouldHaveType('CleanPhp\Domain\Money');
     }
 
-    function it_should_return_label(Label $label)
+    function it_should_return_tag(Tag $tag)
     {
-        $this->getLabel()->shouldReturn($label);
+        $this->getTag()->shouldReturn($tag);
     }
 
     function it_should_return_amount()

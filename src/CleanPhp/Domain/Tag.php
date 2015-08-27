@@ -2,7 +2,7 @@
 
 namespace CleanPhp\Domain;
 
-class Label
+class Tag
 {
     protected $name;
 

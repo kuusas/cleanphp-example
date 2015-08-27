@@ -5,7 +5,7 @@ namespace spec\CleanPhp\Domain;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class LabelSpec extends ObjectBehavior
+class TagSpec extends ObjectBehavior
 {
     function let()
     {
