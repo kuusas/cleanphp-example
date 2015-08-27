@@ -6,7 +6,7 @@ class Tag
 {
     protected $name;
 
-    public function __construct($name)
+    public function setName($name)
     {
         $this->name = $name;
     }
