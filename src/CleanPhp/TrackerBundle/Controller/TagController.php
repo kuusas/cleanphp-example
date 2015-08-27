@@ -2,7 +2,7 @@
 
 namespace CleanPhp\TrackerBundle\Controller;
 
-use CleanPhp\TrackerBundle\Entity\TagEntity;
+use CleanPhp\TrackerBundle\Entity\Tag;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -16,7 +16,7 @@ class TagController extends Controller
     {
         $service = $this->get('tracker.create_tag');
 
-        $tag = new TagEntity($name);
+        $tag = new Tag($name);
         $service->create($tag);
 
         return $this->render(

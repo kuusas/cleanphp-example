@@ -2,12 +2,12 @@
 
 namespace CleanPhp\TrackerBundle\Entity;
 
-use CleanPhp\Domain\Tag;
+use CleanPhp\Domain;
 
 /**
- * TagEntity
+ * Tag
  */
-class TagEntity extends Tag
+class Tag extends Domain\Tag
 {
     /**
      * @var integer

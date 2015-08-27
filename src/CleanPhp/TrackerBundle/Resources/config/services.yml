@@ -4,7 +4,7 @@ services:
         factory_service: doctrine.orm.entity_manager
         factory_method:  getRepository
         arguments:
-            - CleanPhpTrackerBundle:TagEntity
+            - CleanPhpTrackerBundle:Tag
 
     tracker.validator_adapter:
         class: CleanPhp\TrackerBundle\Validator\ValidatorAdapter
