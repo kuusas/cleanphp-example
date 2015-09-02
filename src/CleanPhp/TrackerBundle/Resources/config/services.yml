@@ -6,6 +6,13 @@ services:
         arguments:
             - CleanPhpTrackerBundle:Tag
 
+    tracker.money_repository:
+        class: CleanPhp\TrackerBundle\Entity\MoneyRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments:
+            - CleanPhpTrackerBundle:Money
+
     tracker.validator_adapter:
         class: CleanPhp\TrackerBundle\Validator\ValidatorAdapter
         arguments:
@@ -16,6 +23,11 @@ services:
         arguments:
             - @tracker.tag_repository
             - @tracker.validator_adapter
+
+    tracker.create_money:
+        class: CleanPhp\Model\CreateMoney
+        arguments:
+            - @tracker.money_repository
 
     tracker.get_tags:
         class: CleanPhp\Model\GetTags
