@@ -6,11 +6,21 @@ class Money
 {
     protected $tag;
     protected $amount;
-    
-    public function __construct(Tag $tag, $amount)
+    protected $date;
+
+    public function setTag(Tag $tag)
     {
         $this->tag = $tag;
+    }
+
+    public function setAmount($amount)
+    {
         $this->amount = $amount;
+    }
+
+    public function setDate($date)
+    {
+        $this->date = $date;
     }
 
     public function getTag()
@@ -21,5 +31,10 @@ class Money
     public function getAmount()
     {
         return $this->amount;
+    }
+
+    public function getDate()
+    {
+        return $this->date;
     }
 }
